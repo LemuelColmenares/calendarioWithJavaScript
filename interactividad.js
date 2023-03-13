@@ -9,4 +9,11 @@ const calendar = months.map(monthKey => {
     return monthName
 })
 
+
+const html = calendar.map(({monthName}) => {
+    return '<h1>${monthName} ${actualYear}</h1>'
+}).join('')
+
+document.querySelector('div').innerHTML = html
+
 console.log(calendar);
